@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 /**
  * Corner cases.
- *      1. Throw a java.lang.NullPointerException if the client attempts
+ *      1. Throw a java.lang.IllegalArgumentException if the client attempts
  *       to add a null item;
  *      2. Throw a java.util.NoSuchElementException if the client
  *      attempts to remove an item from an empty deque;
@@ -51,6 +51,9 @@ public class Deque<Item> implements Iterable<Item> {
 
         @Override
         public Item next() {
+            if(first==null)
+                throw new NoSuchElementException();
+
             Item x = first.item;
             first = first.next;
             return x;
@@ -70,6 +73,8 @@ public class Deque<Item> implements Iterable<Item> {
 
         @Override
         public Item next() {
+            if(last==null)
+                throw new NoSuchElementException();
             Item x = last.item;
             last = last.prev;
             return x;
@@ -114,7 +119,7 @@ public class Deque<Item> implements Iterable<Item> {
     public void addFirst(Item item)
     {
         if (null == item)
-            throw new NullPointerException();
+            throw new IllegalArgumentException();
 
         // Create a new node
         Node newNode = new Node();
@@ -150,7 +155,7 @@ public class Deque<Item> implements Iterable<Item> {
     public void addLast(Item item)
     {
         if (null == item)
-            throw new NullPointerException();
+            throw new IllegalArgumentException();
 
         // Create a new node
         Node newNode = new Node();
