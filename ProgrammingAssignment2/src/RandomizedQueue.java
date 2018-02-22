@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 
 
 /**
+<<<<<<< HEAD
  *
  * Corner cases.  Throw the specified exception for the following corner cases:
  *      Throw a java.lang.IllegalArgumentException if the client calls enqueue() with a null argument.
@@ -17,10 +18,34 @@ import java.util.NoSuchElementException;
  *    (besides creating an iterator) in constant amortized time. That is, any sequence of m randomized
  *    headNode operations (starting from an empty headNode) should take at most cm steps in the worst
  * case, for some constant c. A randomized headNode containing n items must use at
+=======
+ * Corner cases.
+ *    The order of two or more iterators to the same randomized queue
+ * must be mutually independent; each iterator must maintain its own random
+ * order.
+ *
+ * Throw a java.lang.NullPointerException if the client attempts to add a
+ * null item;
+ * throw a java.util.NoSuchElementException if the client attempts to
+ * sample or dequeue an item from an empty randomized queue;
+ * throw a java.lang.UnsupportedOperationException if the client calls the remove()
+ * method in the iterator;
+ * throw a java.util.NoSuchElementException if the client calls the next() method
+ * in the iterator and there are no more items to return.
+ *
+ * Performance requirements.
+ * <p> Your randomized queue implementation must support each randomized queue operation
+ * (besides creating an iterator) in constant amortized time. That is, any sequence of m randomized
+ * queue operations (starting from an empty queue) should take at most cm steps in the worst
+ * case, for some constant c.
+ * </p>
+ * <p> A randomized queue containing n items must use at
+>>>>>>> dn kn
  * most 48n + 192 bytes of memory. Additionally, your iterator implementation
  * must support operations next() and hasNext() in constant worst-case time; and
  * construction in linear time; you may (and will need to) use a linear amount
  * of extra memory per iterator.
+ * </p>
  *
  * @author
  * @version
@@ -28,6 +53,7 @@ import java.util.NoSuchElementException;
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
 
+<<<<<<< HEAD
     private Item[] items;
 
     private int size;
@@ -36,6 +62,17 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     public RandomizedQueue() {
         size = 0;
         items = (Item[])new Object[1];
+=======
+
+    Item[] queue = null;
+    int size = 0;
+    int length = 1;
+
+    // construct an empty randomized queue
+    public RandomizedQueue() {
+        queue =(Item[]) new Object[length];
+
+>>>>>>> dn kn
     }
 
     /**
@@ -64,6 +101,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
      */
     public void enqueue(Item item)
     {
+<<<<<<< HEAD
         if (null == item)
             throw new IllegalArgumentException ();
         if(size==items.length){
@@ -71,9 +109,29 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         }
 
         items[size++] = item;
+=======
+        if (item==null)
+            throw new NullPointerException();
 
+        if ((size+1 == length))
+            doubleArraySize();
+>>>>>>> dn kn
+
+        // add the new node at the end of the queue
+        // and increment the size of the queue
+        queue[size] = item ;
+        size++;
     }
 
+    private void doubleArraySize() {
+        Item[] aux = (Item[]) new Object[2*length];
+        for(int i=0;i<queue.length;i++) {
+            aux[i] = queue[i];
+        }
+        queue = aux;
+    }
+
+<<<<<<< HEAD
     private void resize() {
 
         Item[] aux = (Item[]) new Object[2*items.length];
@@ -87,6 +145,15 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         // Pointing yo new resized array
         items = aux;
         // Scope of aux ends here, also original items array gets discarded
+=======
+    public Item dequeue() // remove and return a random item
+    {
+        // store the item
+        int randNumber = StdRandom.uniform(0,size);
+
+        size--;
+        return null;
+>>>>>>> dn kn
     }
 
     /**
@@ -96,6 +163,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
      */
     public Item dequeue()
     {
+<<<<<<< HEAD
         // When empty throw exception
         if(size==0)
             throw new NoSuchElementException();
@@ -128,6 +196,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         Item sampleItem = items[randomNumber];
 
         return sampleItem;
+=======
+        int randNumber = StdRandom.uniform(0,size);
+        return null;
+>>>>>>> dn kn
     }
 
     public Iterator<Item> iterator() // return an independent iterator over

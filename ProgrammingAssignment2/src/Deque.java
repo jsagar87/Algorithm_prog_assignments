@@ -5,7 +5,12 @@ import edu.princeton.cs.algs4.StdOut;
 
 /**
  * Corner cases.
+<<<<<<< HEAD
  *      1. Throw a java.lang.IllegalArgumentException  if the client attempts to add a null item;
+=======
+ *      1. Throw a java.lang.IllegalArgumentException if the client attempts
+ *       to add a null item;
+>>>>>>> dn kn
  *      2. Throw a java.util.NoSuchElementException if the client
  *      attempts to remove an item from an empty deque;
  *      3. Throw a java.lang.UnsupportedOperationException if the client calls the remove()
@@ -50,16 +55,36 @@ public class Deque<Item> implements Iterable<Item> {
 
         @Override
         public Item next() {
+<<<<<<< HEAD
             if (!hasNext())
                 throw new NoSuchElementException();
+=======
+            if(first==null)
+                throw new NoSuchElementException();
+
+>>>>>>> dn kn
             Item x = first.item;
             first = first.next;
             return x;
         }
 
         @Override
+<<<<<<< HEAD
         public void remove() {
             throw new UnsupportedOperationException();
+=======
+        public boolean hasNext() {
+            return last != null ;
+        }
+
+        @Override
+        public Item next() {
+            if(last==null)
+                throw new NoSuchElementException();
+            Item x = last.item;
+            last = last.prev;
+            return x;
+>>>>>>> dn kn
         }
     }
 
@@ -104,7 +129,11 @@ public class Deque<Item> implements Iterable<Item> {
     public void addFirst(Item item)
     {
         if (null == item)
+<<<<<<< HEAD
             throw new IllegalArgumentException ();
+=======
+            throw new IllegalArgumentException();
+>>>>>>> dn kn
 
         // Create a new node
         Node newNode = new Node();
@@ -140,7 +169,11 @@ public class Deque<Item> implements Iterable<Item> {
     public void addLast(Item item)
     {
         if (null == item)
+<<<<<<< HEAD
             throw new IllegalArgumentException ();
+=======
+            throw new IllegalArgumentException();
+>>>>>>> dn kn
 
         // Create a new node
         Node newNode = new Node();
