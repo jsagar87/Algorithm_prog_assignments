@@ -10,7 +10,7 @@ public class Permutation {
 
         String numberString = args[0];
 
-            Integer number = new Integer(numberString);
+        Integer number = Integer.parseInt(numberString);
 
         RandomizedQueue<String> q = new RandomizedQueue<>();
 
