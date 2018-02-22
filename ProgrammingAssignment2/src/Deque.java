@@ -5,12 +5,8 @@ import edu.princeton.cs.algs4.StdOut;
 
 /**
  * Corner cases.
-<<<<<<< HEAD
- *      1. Throw a java.lang.IllegalArgumentException  if the client attempts to add a null item;
-=======
  *      1. Throw a java.lang.IllegalArgumentException if the client attempts
  *       to add a null item;
->>>>>>> dn kn
  *      2. Throw a java.util.NoSuchElementException if the client
  *      attempts to remove an item from an empty deque;
  *      3. Throw a java.lang.UnsupportedOperationException if the client calls the remove()
@@ -55,24 +51,22 @@ public class Deque<Item> implements Iterable<Item> {
 
         @Override
         public Item next() {
-<<<<<<< HEAD
-            if (!hasNext())
-                throw new NoSuchElementException();
-=======
             if(first==null)
                 throw new NoSuchElementException();
 
->>>>>>> dn kn
             Item x = first.item;
             first = first.next;
             return x;
         }
+    }
+    private class DequeReverseIterator implements Iterator<Item>{
+
+        Node last;
+        DequeReverseIterator(){
+            last = tail;
+        }
 
         @Override
-<<<<<<< HEAD
-        public void remove() {
-            throw new UnsupportedOperationException();
-=======
         public boolean hasNext() {
             return last != null ;
         }
@@ -84,10 +78,8 @@ public class Deque<Item> implements Iterable<Item> {
             Item x = last.item;
             last = last.prev;
             return x;
->>>>>>> dn kn
         }
     }
-
 	/*
 	 * ---------------------------------------
 	 * Instance variable(s)
@@ -117,23 +109,17 @@ public class Deque<Item> implements Iterable<Item> {
 
     // is the deque empty?
     public boolean isEmpty() {
-        return size == 0;
+        return head == tail;
     }
 
     // return the number of items on the deque
-    public int size() {
-        return size;
-    }
+    public int size() { return size; }
 
     // add the item to the front
     public void addFirst(Item item)
     {
         if (null == item)
-<<<<<<< HEAD
-            throw new IllegalArgumentException ();
-=======
             throw new IllegalArgumentException();
->>>>>>> dn kn
 
         // Create a new node
         Node newNode = new Node();
@@ -147,10 +133,10 @@ public class Deque<Item> implements Iterable<Item> {
         }
         else
         {
-//            Node oldHead = head;
-            head.prev = newNode;
+            Node oldHead = head;
+            oldHead.prev = newNode;
 
-            newNode.next = head;
+            newNode.next = oldHead;
             newNode.prev = null;
         }
 
@@ -169,11 +155,7 @@ public class Deque<Item> implements Iterable<Item> {
     public void addLast(Item item)
     {
         if (null == item)
-<<<<<<< HEAD
-            throw new IllegalArgumentException ();
-=======
             throw new IllegalArgumentException();
->>>>>>> dn kn
 
         // Create a new node
         Node newNode = new Node();
@@ -187,8 +169,8 @@ public class Deque<Item> implements Iterable<Item> {
         }
         else
         {
-//            Node oldTail = tail;
-            tail.next = newNode;
+            Node oldTail = tail;
+            oldTail.next = newNode;
 
             newNode.prev = tail;
             newNode.next = null;
@@ -204,7 +186,7 @@ public class Deque<Item> implements Iterable<Item> {
     /**
      * remove and return the item from the front
      *
-     * @return first item from the headNode
+     * @return first item from the queue
      */
     public Item removeFirst()
     {
@@ -212,8 +194,7 @@ public class Deque<Item> implements Iterable<Item> {
             throw new NoSuchElementException();
         Item itemBuffer = head.item;
         head = head.next;
-        if (head!=null)
-            head.prev = null;   // Cleaning is required
+        head.prev = null;   // Cleaning is required
         size--;
         return itemBuffer;
     }
@@ -229,8 +210,7 @@ public class Deque<Item> implements Iterable<Item> {
             throw new NoSuchElementException();
         Item itemBuffer = tail.item;
         tail = tail.prev;
-        if(tail!=null)
-            tail.next = null;   // Cleaning is required after popping out item
+        tail.next = null;   // Cleaning is required after popping out item
         size--;
         return itemBuffer;
 
@@ -245,49 +225,56 @@ public class Deque<Item> implements Iterable<Item> {
         return new DequeIterator();
     }
 
+    public Iterator<Item> reverseIterator() {
+        return new DequeReverseIterator();
+    }
+
 
     public static void main(String[] args) // unit testing (optional)
     {
-//        Deque<String> myDeque = new Deque<>();
-//
-//        // Lets print 1st item
-//        // StdOut.println(myDeque.removeFirst());
-//
-//        // Initial size of stack must be 0, hence following line
-//        // must return true
-//        StdOut.println(myDeque.isEmpty());
-//
-//        // And this line should return size 0
-//        StdOut.println(myDeque.size());
-//
-//        // Lets add some item to test size increses properly or not
-//        myDeque.addFirst("Hello");
-//        myDeque.addFirst(",");
-//        myDeque.addFirst("World !");
-//        myDeque.addLast("Woooo hoo !");
-//
-//        // At this point size must be 4
-//        StdOut.println(myDeque.size());
-//
-//        // Lets print 1st item,it should print "World !"
-//        StdOut.println(myDeque.removeFirst());
-//
-//        // Lets print the last item,it should print "Woooo hoo !"
-//        StdOut.println(myDeque.removeLast());
-//
-//        Iterator<String> stringIterator = myDeque.iterator();
-//        StdOut.println(stringIterator.hasNext());
-//        while(stringIterator.hasNext()){
-//            StdOut.println(stringIterator.next());
-//        }
-//
-//        Iterator<String> stringReverseIterator = myDeque.iterator();
-//        StdOut.println(stringReverseIterator.hasNext());
-//        while(stringReverseIterator.hasNext()){
-//            StdOut.println(stringReverseIterator.next());
-//        }
-        Deque<Integer> deque = new Deque<Integer>();
-        deque.addFirst(0);
-        System.out.println(deque.removeFirst());
+        Deque<String> myDeque = new Deque<>();
+
+        // Lets print 1st item
+        // StdOut.println(myDeque.removeFirst());
+
+        // Initial size of stack must be 0, hence following line
+        // must return true
+        StdOut.println(myDeque.isEmpty());
+
+        // And this line should return size 0
+        StdOut.println(myDeque.size());
+
+        // Lets add some item to test size increses properly or not
+        myDeque.addFirst("Hello");
+        myDeque.addFirst(",");
+        myDeque.addFirst("World !");
+        myDeque.addLast("Woooo hoo !");
+
+        // At this point size must be 4
+        StdOut.println(myDeque.size());
+
+        // Lets print 1st item,it should print "World !"
+        StdOut.println(myDeque.removeFirst());
+
+        // Lets print the last item,it should print "Hello"
+        StdOut.println(myDeque.removeLast());
+
+        StdOut.println("----");
+        StdOut.println("----");
+
+        Iterator<String> stringIterator = myDeque.iterator();
+        StdOut.println(stringIterator.hasNext());
+        while(stringIterator.hasNext()){
+            StdOut.println(stringIterator.next());
+        }
+
+        StdOut.println("----");
+        StdOut.println("----");
+
+        Iterator<String> stringReverseIterator = myDeque.reverseIterator();
+        StdOut.println(stringReverseIterator.hasNext());
+        while(stringReverseIterator.hasNext()){
+            StdOut.println(stringReverseIterator.next());
+        }
     }
 }
