@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AlgorithmsCommon/AlgorithmsCommon.iml" filepath="$PROJECT_DIR$/AlgorithmsCommon/AlgorithmsCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgrammingAssignment1/ProgrammingAssignment1.iml" filepath="$PROJECT_DIR$/ProgrammingAssignment1/ProgrammingAssignment1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgrammingAssignment2/ProgrammingAssignment2.iml" filepath="$PROJECT_DIR$/ProgrammingAssignment2/ProgrammingAssignment2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgrammingAssignment3/ProgrammingAssignment3.iml" filepath="$PROJECT_DIR$/ProgrammingAssignment3/ProgrammingAssignment3.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProgrammingAssignments.iml" filepath="$PROJECT_DIR$/ProgrammingAssignments.iml" />
     </modules>
   </component>

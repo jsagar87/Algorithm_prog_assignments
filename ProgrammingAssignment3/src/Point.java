@@ -8,8 +8,10 @@
  *
  ******************************************************************************/
 
-import java.util.Comparator;
+import java.util.*;
+
 import edu.princeton.cs.algs4.StdDraw;
+import edu.rice.cs.plt.debug.SystemOutLogSink;
 
 public class Point implements Comparable<Point> {
 
@@ -60,6 +62,9 @@ public class Point implements Comparable<Point> {
      */
     public double slopeTo(Point that) {
         /* YOUR CODE HERE */
+        Double y0 = Double.valueOf(this.y),y1=Double.valueOf(that.y),
+                x0 = Double.valueOf(this.x),x1=Double.valueOf(that.y);
+        return (y1 - y0)/(x1-x0);
     }
 
     /**
@@ -76,6 +81,10 @@ public class Point implements Comparable<Point> {
      */
     public int compareTo(Point that) {
         /* YOUR CODE HERE */
+        if ( this.y < that.y || this.x < that.x){
+            return -1;
+        }
+        return 0;
     }
 
     /**
@@ -86,6 +95,12 @@ public class Point implements Comparable<Point> {
      */
     public Comparator<Point> slopeOrder() {
         /* YOUR CODE HERE */
+        return new Comparator<Point>() {
+            @Override
+            public int compare(Point o1, Point o2) {
+                return o1.compareTo(o2);
+            }
+        };
     }
 
 
@@ -106,5 +121,46 @@ public class Point implements Comparable<Point> {
      */
     public static void main(String[] args) {
         /* YOUR CODE HERE */
+        Point p1 = new Point(0,0);
+        Point p2 = new Point(100,100);
+
+        // Compare method use case 1 should result -1
+        System.out.println(" P1 compare to P2 " + p1.compareTo(p2));
+        assert (p1.compareTo(p2)==-1);
+
+        // Use case 2 For x am y same
+        Point p3 = new Point(0,0);
+        System.out.println(" P1 compare to P3 " + p1.compareTo(p3));
+        assert (p1.compareTo(p3)==0);
+
+        // Use case 3 for x greater
+        Point p4 = new Point(-1,-1);
+        System.out.println(" P1 compare to P4 " + p1.compareTo(p4));
+        assert (p1.compareTo(p4))==0;
+        //p1.drawTo(p2);
+
+        // Use case 4 For x am y same
+        Point p5 = new Point(0,10);
+        System.out.println(" P1 compare to P5 " + p1.compareTo(p5));
+        assert (p1.compareTo(p5)==0);
+
+        System.out.println(Double.valueOf("10.0").toString());
+
+        System.out.println(p1.slopeTo(p5));
+
+        List<Point> points = new ArrayList<Point>();
+        points.add(p1);
+        points.add(p2);
+        points.add(p3);
+        points.add(p4);
+        points.add(p5);
+
+
+        for(Point p : points)
+            System.out.println(p);
+
+
+
+
     }
 }
