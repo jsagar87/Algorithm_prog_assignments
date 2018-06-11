@@ -1,0 +1,19 @@
+Comparable API required compareTo API
+
+compareTo method needs to follow
+--> Totality/Total order
+
+Other rules by convention
+--> Returns a negative if this is less than that
+              positive if this is greater than that
+              zero if this is equal to that
+--> Throws an exception for incompatible types
+
+What os total order??
+
+
+Built in Comparable types :
+Integer, Double, String, Date, File
+
+User-Defined Comparable types :
+Implement comparable interface
