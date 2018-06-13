@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d58a15b-6cd1-47b1-864f-afa90c428dbe" name="Default" comment="Asn 3 BruteForce implemented">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/resource/sorting/words3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/graph/Graph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/graph/HelperFunctions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/Experiment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/FileSorter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/HelperFunctions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/InsertionSort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/QuickSort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/SelectionSort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/ShellSort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/StringSorter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/Temperature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/sorting/compareTo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ProgrammingAssignment3/resources/collinear/input4.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ProgrammingAssignment3/src/TestClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ProgrammingAssignment4/ProgrammingAssignment4.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="9d58a15b-6cd1-47b1-864f-afa90c428dbe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProgrammingAssignment3/src/BruteCollinearPoints.java" afterPath="$PROJECT_DIR$/ProgrammingAssignment3/src/BruteCollinearPoints.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProgrammingAssignment3/src/FastCollinearPoints.java" afterPath="$PROJECT_DIR$/ProgrammingAssignment3/src/FastCollinearPoints.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProgrammingAssignment3/src/LineSegment.java" afterPath="$PROJECT_DIR$/ProgrammingAssignment3/src/LineSegment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProgrammingAssignment3/src/Point.java" afterPath="$PROJECT_DIR$/ProgrammingAssignment3/src/Point.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProgrammingAssignments.iml" afterPath="$PROJECT_DIR$/ProgrammingAssignments.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AlgorithmsCommon/src/graph/Graph.java" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/graph/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AlgorithmsCommon/src/graph/HelperFunctions.java" afterPath="$PROJECT_DIR$/AlgorithmsCommon/src/graph/HelperFunctions.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,9 +93,17 @@
       <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AlgorithmsCommon/src/graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="2001">
+              <caret line="65" column="55" lean-forward="true" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
+                <element signature="e#948#949#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,9 +111,12 @@
       <file leaf-file-name="HelperFunctions.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AlgorithmsCommon/src/graph/HelperFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="1401">
+              <caret line="56" column="50" lean-forward="false" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+              <folding>
+                <element signature="e#783#784#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -567,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526430368184</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Asn 3 BruteForce implemented,Many Sorting an graph">
+      <created>1528679158031</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528679158031</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -615,7 +612,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Asn 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Asn 3" />
+    <MESSAGE value="Asn 3 BruteForce implemented,Many Sorting an graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Asn 3 BruteForce implemented,Many Sorting an graph" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -996,17 +994,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AlgorithmsCommon/src/graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="2001">
+          <caret line="65" column="55" lean-forward="true" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AlgorithmsCommon/src/graph/HelperFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="1401">
+          <caret line="56" column="50" lean-forward="false" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+          <folding>
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
